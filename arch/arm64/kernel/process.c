@@ -54,11 +54,9 @@
 #include <asm/stacktrace.h>
 #include <trace/hooks/minidump.h>
 
-#ifdef CONFIG_STACKPROTECTOR
 #include <linux/stackprotector.h>
 __visible unsigned long __stack_chk_guard __ro_after_init;
 EXPORT_SYMBOL(__stack_chk_guard);
-#endif
 
 /*
  * Function pointers to optional machine specific functions
